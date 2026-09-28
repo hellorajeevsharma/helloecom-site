@@ -354,6 +354,62 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
 .footer-contact-list li.footer-office{display:block;padding-top:8px}
 .footer-contact-list li.footer-office strong{display:block;color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:0.85rem;margin-bottom:4px}
 .footer-contact-list li.footer-office span{display:block;color:var(--f-muted);font-size:0.85rem;line-height:1.5}
+
+/* ---- layout fixes: side padding on full-width sections + header alignment ---- */
+.wrap.hero,.wrap.about-hero,.wrap.contact-page-head,.wrap.contact-main,.wrap.legal-content,.wrap.footer-grid,.wrap.footer-bottom{padding-left:28px;padding-right:28px}
+.masthead-inner{align-items:center}
+/* ---- services dropdown ---- */
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{font:inherit;color:var(--ink-soft);background:none;border:0;padding:0;cursor:pointer}
+.nav-dropdown-toggle:hover,.nav-dropdown.dd-open .nav-dropdown-toggle{color:var(--ink)}
+.nav-dropdown-toggle::after{
+  content:"";display:inline-block;width:6px;height:6px;margin-left:8px;position:relative;top:-2px;
+  border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);
+}
+.nav-dropdown-menu{
+  display:none;position:absolute;top:calc(100% + 14px);left:-14px;min-width:230px;z-index:30;
+  background:var(--paper);border:1px solid var(--rule);border-radius:3px;padding:8px 0;
+  box-shadow:0 10px 30px rgba(15,28,43,.14);
+}
+.nav-dropdown-menu::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+.nav-dropdown-menu a{display:block;padding:9px 18px;white-space:nowrap}
+.nav-dropdown-menu a:hover{background:var(--paper-2);color:var(--ink)}
+.nav-dropdown.dd-open .nav-dropdown-menu{display:block}
+@media (hover:hover) and (min-width:781px){ .nav-dropdown:hover .nav-dropdown-menu{display:block} }
+@media(max-width:780px){
+  .nav-dropdown{width:100%}
+  .nav-dropdown-toggle{
+    width:100%;text-align:left;padding:12px 0;border-bottom:1px solid var(--rule);
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .nav-dropdown-toggle::after{margin-left:auto}
+  .nav-dropdown-menu{position:static;min-width:0;border:0;box-shadow:none;background:transparent;padding:0 0 0 14px}
+  .nav-dropdown-menu::before{display:none}
+  .nav-dropdown-menu a{padding:12px 0}
+}
+
+/* ---- contact form ---- */
+.contact-main h2{font-size:1.4rem}
+@media(min-width:820px){ .contact-main.with-form{grid-template-columns:1.4fr 0.8fr;align-items:start} }
+.contact-form{margin-top:24px;display:grid;gap:18px}
+.form-row.two{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:560px){ .form-row.two{grid-template-columns:1fr 1fr} }
+.field label{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:0.92rem;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);
+  border:1px solid var(--rule);border-radius:2px;padding:12px 14px;
+}
+.field textarea{resize:vertical;min-height:140px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--ink-soft)}
+.phone-row{display:grid;grid-template-columns:minmax(120px,9.5rem) 1fr;gap:10px}
+.contact-form .btn{justify-self:start;font-size:1rem}
+.contact-form .btn[disabled]{opacity:.6;cursor:not-allowed}
+.form-status{margin:0;font-size:0.95rem;min-height:1.4em;color:var(--ink-soft)}
+.form-status.success{color:var(--green)}
+.form-status.error{color:#B3261E}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .form-status.error{color:#F2A29B} }
+:root[data-theme="dark"] .form-status.error{color:#F2A29B}
+.contact-address{margin:14px 0 0;color:var(--ink-soft)}
 </style>
 </head><body>
 
@@ -363,33 +419,114 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
   <section class="wrap contact-page-head">
     <a class="backlink" href="index.html">&larr; HoobHoo home</a>
     <h1 style="margin-top:16px">Tell us what's stuck.</h1>
-    <p>Amazon advertising, marketplace listings, a website your developers and marketing team disagree about, or a Magento store that needs running — send the detail and we'll tell you what we'd do first.</p>
+    <p>Amazon advertising, marketplace listings, a Shopify or Magento store, or a website your developers and marketing team disagree about. Send the detail and we'll tell you what we'd do first.</p>
   </section>
 
-  <section class="wrap contact-main">
+  <section class="wrap contact-main with-form">
     <div>
-      <h2>What to include</h2>
-      <ul class="checklist">
-        <li><b>What you sell</b><span>Product category and roughly how many SKUs.</span></li>
-        <li><b>Where you sell</b><span>Amazon, other marketplaces, your own website — and which countries.</span></li>
-        <li><b>What's not working</b><span>Rising ACoS, a launch that's stalled, a site your team can't agree on, a store that needs a developer hand-off.</span></li>
-        <li><b>Current spend, if relevant</b><span>Rough Amazon or Google/Meta ad budget, so we can scope realistically.</span></li>
-        <li><b>Timeline</b><span>Whether this is urgent or something you're planning ahead for.</span></li>
-      </ul>
+      <h2>Send us a message</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+
+        <div class="form-row two">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="first_name" type="text" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="last_name" type="text" autocomplete="family-name" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <div class="phone-row">
+            <select id="countryCode" name="country_code" aria-label="Country code">
+              <option value="+44" selected>UK (+44)</option>
+              <option value="+353">Ireland (+353)</option>
+              <option value="+49">Germany (+49)</option>
+              <option value="+33">France (+33)</option>
+              <option value="+34">Spain (+34)</option>
+              <option value="+39">Italy (+39)</option>
+              <option value="+31">Netherlands (+31)</option>
+              <option value="+32">Belgium (+32)</option>
+              <option value="+46">Sweden (+46)</option>
+              <option value="+48">Poland (+48)</option>
+              <option value="+45">Denmark (+45)</option>
+              <option value="+47">Norway (+47)</option>
+              <option value="+358">Finland (+358)</option>
+              <option value="+41">Switzerland (+41)</option>
+              <option value="+43">Austria (+43)</option>
+              <option value="+351">Portugal (+351)</option>
+              <option value="+420">Czechia (+420)</option>
+              <option value="+40">Romania (+40)</option>
+              <option value="+30">Greece (+30)</option>
+              <option value="+1">USA (+1)</option>
+              <option value="+1">Canada (+1)</option>
+              <option value="+91">India (+91)</option>
+              <option value="+92">Pakistan (+92)</option>
+              <option value="+880">Bangladesh (+880)</option>
+              <option value="+94">Sri Lanka (+94)</option>
+              <option value="+977">Nepal (+977)</option>
+              <option value="+971">UAE (+971)</option>
+              <option value="+966">Saudi Arabia (+966)</option>
+              <option value="+90">Turkey (+90)</option>
+              <option value="+20">Egypt (+20)</option>
+              <option value="+234">Nigeria (+234)</option>
+              <option value="+254">Kenya (+254)</option>
+              <option value="+27">South Africa (+27)</option>
+              <option value="+65">Singapore (+65)</option>
+              <option value="+852">Hong Kong (+852)</option>
+              <option value="+86">China (+86)</option>
+              <option value="+81">Japan (+81)</option>
+              <option value="+61">Australia (+61)</option>
+              <option value="+64">New Zealand (+64)</option>
+              <option value="+55">Brazil (+55)</option>
+              <option value="+52">Mexico (+52)</option>
+            </select>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="Phone number" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="service">Service you're interested in</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="Amazon services">Amazon services</option>
+            <option value="Marketplace management (eBay, Etsy, Bol.com and others)">Marketplace management (eBay, Etsy, Bol.com and others)</option>
+            <option value="Shopify design, development &amp; migration">Shopify design, development &amp; migration</option>
+            <option value="Magento build &amp; management">Magento build &amp; management</option>
+            <option value="SEO services (agentic, on-page &amp; technical)">SEO services (agentic, on-page &amp; technical)</option>
+            <option value="Something else / not sure yet">Something else / not sure yet</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-solid">Submit</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
 
     <div>
       <h2>Reach us directly</h2>
       <ul class="contact-direct-list">
         <li><a href="mailto:hello@hoobhoo.com">hello@hoobhoo.com</a></li>
-        <li><a href="tel:+910000000000">+91 00000 00000</a></li>
         <li><a href="https://www.linkedin.com/in/" rel="me">LinkedIn</a></li>
       </ul>
-      <p class="contact-note">Two offices, one team — UK and India — working hours across every time zone we serve. We reply to every enquiry within one business day.</p>
-      <ul class="checklist" style="margin-top:30px">
-        <li><b>UK Office — Crexa Ltd</b><span>Apex House, Calthorpe Road, Edgbaston, Birmingham, England, B15 1TR</span></li>
-        <li><b>India Office</b><span>Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana 122015</span></li>
-      </ul>
+      <h2 style="margin-top:38px">Our office</h2>
+      <p class="contact-address">Apex House, Calthorpe Road<br>Edgbaston, Birmingham<br>England, B15 1TR</p>
+      <p class="contact-note">Working hours across every time zone we serve. We reply to every enquiry within one business day.</p>
     </div>
   </section>
 </main>
@@ -397,17 +534,99 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
 <div id="site-footer"></div>
 
 <script>
+document.addEventListener('click', function(e){
+  var burger = e.target.closest('#navToggle');
+  if(burger){
+    var nav = document.getElementById('siteNav');
+    var open = nav.classList.toggle('nav-open');
+    burger.classList.toggle('is-active', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    return;
+  }
+  var dd = e.target.closest('.nav-dropdown-toggle');
+  if(dd){
+    var wrap = dd.parentNode;
+    var isOpen = wrap.classList.toggle('dd-open');
+    dd.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    return;
+  }
+  var openDd = document.querySelector('.nav-dropdown.dd-open');
+  if(openDd && !e.target.closest('.nav-dropdown')){
+    openDd.classList.remove('dd-open');
+    openDd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+  }
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    var openDd = document.querySelector('.nav-dropdown.dd-open');
+    if(openDd){
+      openDd.classList.remove('dd-open');
+      openDd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+</script>
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  var status = document.getElementById('formStatus');
+  var btn = form.querySelector('button[type="submit"]');
+  var ENDPOINT = 'https://api.web3forms.com/submit';
+  var FALLBACK = 'Sorry, something went wrong. Please email hello@hoobhoo.com instead.';
+
+  function setStatus(msg, kind){ status.textContent = msg; status.className = 'form-status' + (kind ? ' ' + kind : ''); }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+
+    var key = form.elements['access_key'].value;
+    if(!key || key.indexOf('YOUR_') === 0){
+      setStatus('This form is not connected yet. Please email hello@hoobhoo.com in the meantime.', 'error');
+      return;
+    }
+
+    var first = form.elements['first_name'].value.trim();
+    var last = form.elements['last_name'].value.trim();
+    var payload = {
+      access_key: key,
+      subject: 'New enquiry from the HoobHoo website',
+      from_name: 'HoobHoo website',
+      name: first + ' ' + last,
+      first_name: first,
+      last_name: last,
+      email: form.elements['email'].value.trim(),
+      phone: form.elements['country_code'].value + ' ' + form.elements['phone'].value.trim(),
+      service: form.elements['service'].value,
+      message: form.elements['message'].value.trim(),
+      botcheck: form.elements['botcheck'].checked
+    };
+
+    btn.disabled = true;
+    setStatus('Sending...', '');
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if(res && res.success){
+        form.reset();
+        setStatus('Thank you, your message has been sent. We reply to every enquiry within one business day.', 'success');
+      } else {
+        setStatus(FALLBACK, 'error');
+      }
+    })
+    .catch(function(){ setStatus(FALLBACK, 'error'); })
+    .then(function(){ btn.disabled = false; });
+  });
+})();
+</script>
+<script>
   fetch('header.html').then(function(r){ return r.text(); }).then(function(html){
     document.getElementById('site-header').outerHTML = html;
-    var btn = document.getElementById('navToggle');
-    var nav = document.getElementById('siteNav');
-    if(btn && nav){
-      btn.addEventListener('click', function(){
-        var isOpen = nav.classList.toggle('nav-open');
-        btn.classList.toggle('is-active', isOpen);
-        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
   }).catch(function(err){ console.error('Could not load header:', err); });
 
   fetch('footer.html').then(function(r){ return r.text(); }).then(function(html){

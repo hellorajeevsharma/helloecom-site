@@ -1,7 +1,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About HoobHoo — India's Amazon &amp; Marketplace Operations Partner</title>
+<title>About HoobHoo — Amazon, Marketplace &amp; Web Operations Partner</title>
 <meta name="description" content="Why HoobHoo exists: what we believe, and how we run Amazon advertising, marketplace listings and Magento stores under one accountable team.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hellorajeevsharma.github.io/helloecom-site/about.html">
@@ -346,6 +346,39 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
 .about-cta .eyebrow-free{display:block}
 .about-cta h2{margin-top:12px;font-size:clamp(1.6rem,3.6vw,2.3rem)}
 .about-cta .hero-actions{justify-content:center;margin-top:26px}
+
+/* ---- layout fixes: side padding on full-width sections + header alignment ---- */
+.wrap.hero,.wrap.about-hero,.wrap.contact-page-head,.wrap.contact-main,.wrap.legal-content,.wrap.footer-grid,.wrap.footer-bottom{padding-left:28px;padding-right:28px}
+.masthead-inner{align-items:center}
+/* ---- services dropdown ---- */
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{font:inherit;color:var(--ink-soft);background:none;border:0;padding:0;cursor:pointer}
+.nav-dropdown-toggle:hover,.nav-dropdown.dd-open .nav-dropdown-toggle{color:var(--ink)}
+.nav-dropdown-toggle::after{
+  content:"";display:inline-block;width:6px;height:6px;margin-left:8px;position:relative;top:-2px;
+  border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);
+}
+.nav-dropdown-menu{
+  display:none;position:absolute;top:calc(100% + 14px);left:-14px;min-width:230px;z-index:30;
+  background:var(--paper);border:1px solid var(--rule);border-radius:3px;padding:8px 0;
+  box-shadow:0 10px 30px rgba(15,28,43,.14);
+}
+.nav-dropdown-menu::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+.nav-dropdown-menu a{display:block;padding:9px 18px;white-space:nowrap}
+.nav-dropdown-menu a:hover{background:var(--paper-2);color:var(--ink)}
+.nav-dropdown.dd-open .nav-dropdown-menu{display:block}
+@media (hover:hover) and (min-width:781px){ .nav-dropdown:hover .nav-dropdown-menu{display:block} }
+@media(max-width:780px){
+  .nav-dropdown{width:100%}
+  .nav-dropdown-toggle{
+    width:100%;text-align:left;padding:12px 0;border-bottom:1px solid var(--rule);
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .nav-dropdown-toggle::after{margin-left:auto}
+  .nav-dropdown-menu{position:static;min-width:0;border:0;box-shadow:none;background:transparent;padding:0 0 0 14px}
+  .nav-dropdown-menu::before{display:none}
+  .nav-dropdown-menu a{padding:12px 0}
+}
 </style>
 </head><body>
 
@@ -413,17 +446,41 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
 <div id="site-footer"></div>
 
 <script>
+document.addEventListener('click', function(e){
+  var burger = e.target.closest('#navToggle');
+  if(burger){
+    var nav = document.getElementById('siteNav');
+    var open = nav.classList.toggle('nav-open');
+    burger.classList.toggle('is-active', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    return;
+  }
+  var dd = e.target.closest('.nav-dropdown-toggle');
+  if(dd){
+    var wrap = dd.parentNode;
+    var isOpen = wrap.classList.toggle('dd-open');
+    dd.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    return;
+  }
+  var openDd = document.querySelector('.nav-dropdown.dd-open');
+  if(openDd && !e.target.closest('.nav-dropdown')){
+    openDd.classList.remove('dd-open');
+    openDd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+  }
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    var openDd = document.querySelector('.nav-dropdown.dd-open');
+    if(openDd){
+      openDd.classList.remove('dd-open');
+      openDd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+</script>
+<script>
   fetch('header.html').then(function(r){ return r.text(); }).then(function(html){
     document.getElementById('site-header').outerHTML = html;
-    var btn = document.getElementById('navToggle');
-    var nav = document.getElementById('siteNav');
-    if(btn && nav){
-      btn.addEventListener('click', function(){
-        var isOpen = nav.classList.toggle('nav-open');
-        btn.classList.toggle('is-active', isOpen);
-        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
   }).catch(function(err){ console.error('Could not load header:', err); });
 
   fetch('footer.html').then(function(r){ return r.text(); }).then(function(html){
