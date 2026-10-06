@@ -1,8 +1,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HoobHoo — Contact</title>
-<meta name="description" content="Get in touch with HoobHoo about Amazon advertising, marketplace management, website and technical SEO, or Magento store build and support.">
+<title>HelloEcom — Contact</title>
+<meta name="description" content="Get in touch with HelloEcom about Amazon advertising, marketplace management, website and technical SEO, or Magento store build and support.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hellorajeevsharma.github.io/helloecom-site/contact.html">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,17 +11,17 @@
 <meta name="theme-color" content="#F3F5F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0D1620" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="HoobHoo">
-<meta property="og:title" content="HoobHoo — Contact">
-<meta property="og:description" content="Get in touch with HoobHoo about Amazon advertising, marketplace management, website and technical SEO, or Magento store build and support.">
+<meta property="og:site_name" content="HelloEcom">
+<meta property="og:title" content="HelloEcom — Contact">
+<meta property="og:description" content="Get in touch with HelloEcom about Amazon advertising, marketplace management, website and technical SEO, or Magento store build and support.">
 <meta property="og:url" content="https://hellorajeevsharma.github.io/helloecom-site/contact.html">
 <meta property="og:image" content="https://hellorajeevsharma.github.io/helloecom-site/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HoobHoo — Contact">
-<meta name="twitter:description" content="Get in touch with HoobHoo about Amazon advertising, marketplace management, website and technical SEO, or Magento store build and support.">
+<meta name="twitter:title" content="HelloEcom — Contact">
+<meta name="twitter:description" content="Get in touch with HelloEcom about Amazon advertising, marketplace management, website and technical SEO, or Magento store build and support.">
 <meta name="twitter:image" content="https://hellorajeevsharma.github.io/helloecom-site/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -417,7 +417,7 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
 
 <main>
   <section class="wrap contact-page-head">
-    <a class="backlink" href="index.html">&larr; HoobHoo home</a>
+    <a class="backlink" href="index.html">&larr; HelloEcom home</a>
     <h1 style="margin-top:16px">Tell us what's stuck.</h1>
     <p>Amazon advertising, marketplace listings, a Shopify or Magento store, or a website your developers and marketing team disagree about. Send the detail and we'll tell you what we'd do first.</p>
   </section>
@@ -525,7 +525,7 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
     <div>
       <h2>Reach us directly</h2>
       <ul class="contact-direct-list">
-        <li><a href="mailto:hello@hoobhoo.com">hello@hoobhoo.com</a></li>
+        <li><a href="mailto:connect@helloecom.net">connect@helloecom.net</a></li>
         <li><a href="https://www.linkedin.com/in/" rel="me">LinkedIn</a></li>
       </ul>
       <h2 style="margin-top:38px">Our offices</h2>
@@ -578,7 +578,7 @@ document.addEventListener('keydown', function(e){
   var status = document.getElementById('formStatus');
   var btn = form.querySelector('button[type="submit"]');
   var ENDPOINT = 'https://api.web3forms.com/submit';
-  var FALLBACK = 'Sorry, something went wrong. Please email hello@hoobhoo.com instead.';
+  var FALLBACK = 'Sorry, something went wrong. Please email connect@helloecom.net instead.';
 
   function setStatus(msg, kind){ status.textContent = msg; status.className = 'form-status' + (kind ? ' ' + kind : ''); }
 
@@ -588,7 +588,7 @@ document.addEventListener('keydown', function(e){
 
     var key = form.elements['access_key'].value;
     if(!key || key.indexOf('YOUR_') === 0){
-      setStatus('This form is not connected yet. Please email hello@hoobhoo.com in the meantime.', 'error');
+      setStatus('This form is not connected yet. Please email connect@helloecom.net in the meantime.', 'error');
       return;
     }
 
@@ -596,8 +596,8 @@ document.addEventListener('keydown', function(e){
     var last = form.elements['last_name'].value.trim();
     var payload = {
       access_key: key,
-      subject: 'New enquiry from the HoobHoo website',
-      from_name: 'HoobHoo website',
+      subject: 'New enquiry from the HelloEcom website',
+      from_name: 'HelloEcom website',
       name: first + ' ' + last,
       first_name: first,
       last_name: last,
@@ -629,6 +629,7 @@ document.addEventListener('keydown', function(e){
   });
 })();
 </script>
+
 <script>
   fetch('header.html').then(function(r){ return r.text(); }).then(function(html){
     document.getElementById('site-header').outerHTML = html;
