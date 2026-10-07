@@ -207,6 +207,44 @@ a:focus-visible,button:focus-visible{
 .founder-bio p{margin:0 0 14px}
 .founder-bio p:last-child{margin-bottom:0}
 
+
+/* ---- FAQ ---- */
+.faq-list{margin-top:34px;display:grid;gap:0}
+.faq-item{border-top:1px solid var(--rule)}
+.faq-item:last-child{border-bottom:1px solid var(--rule)}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:20px 34px 20px 0;position:relative;
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.05rem;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";position:absolute;right:2px;top:18px;font-size:1.3rem;
+  color:var(--green);font-weight:700;line-height:1;
+}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item p{margin:0 0 22px;max-width:62ch;color:var(--ink-soft)}
+
+/* ---- cookie banner ---- */
+.cookie-banner{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;
+  background:#101014;border-top:1px solid #26272E;
+  padding:18px 0;
+}
+.cookie-banner[hidden]{display:none}
+.cookie-banner-inner{
+  max-width:1160px;margin:0 auto;padding:0 28px;
+  display:grid;gap:14px;grid-template-columns:1fr;align-items:center;
+}
+@media(min-width:760px){
+  .cookie-banner-inner{grid-template-columns:1fr auto;gap:28px}
+}
+.cookie-banner p{margin:0;font-size:0.92rem;color:#F2F3F1;max-width:66ch}
+.cookie-banner a{color:var(--gold)}
+.cookie-banner-actions{display:flex;gap:12px;flex-wrap:wrap}
+.cookie-banner-actions .btn{padding:10px 18px;font-size:0.9rem}
+.cookie-banner-actions .btn-solid{background:var(--gold);color:#101014}
+.cookie-banner-actions .btn-line{border-color:#3A3B42;color:#F2F3F1}
+
 /* ---- contact ---- */
 .contact{background:var(--paper-2);margin-top:0;padding:64px 0 70px;border-top:1px solid var(--rule)}
 .contact h2{font-size:clamp(1.7rem,4vw,2.5rem);max-width:18ch}
@@ -456,6 +494,35 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
     </div>
   </section>
 
+  
+  <section class="band" id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Who is this training for — beginners or people already running campaigns?</summary>
+          <p>Both tracks exist — foundational training for teams starting from scratch, and advanced sessions for people already running Amazon, Google or Meta Ads who want to go deeper.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is the training delivered in person, live online, or self-paced?</summary>
+          <p>Live, delivered online or in person depending on location — built around your team's actual accounts and data rather than generic slides.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can training be customised to our industry or current ad accounts?</summary>
+          <p>Yes — we typically build sessions around your own Amazon, Google or Meta accounts so the team is learning on real data, not a hypothetical example.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you train in-house marketing teams, or only agencies?</summary>
+          <p>Both — in-house teams who want to bring management back internally, and agencies or freelancers wanting to add Amazon, Google, Meta or advanced SEO skills.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's covered under 'advanced-level SEO training'?</summary>
+          <p>Technical SEO diagnostics, content strategy, and the agentic/ongoing SEO management approach we use on client accounts — not just keyword basics.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <div class="wrap">
       <h2>Want your team trained on Amazon, Google, Meta or SEO?</h2>
@@ -501,6 +568,34 @@ document.addEventListener('keydown', function(e){
     }
   }
 });
+</script>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie notice" hidden>
+  <div class="cookie-banner-inner">
+    <p>We use cookies to run this site and to understand how it's used. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <div class="cookie-banner-actions">
+      <button type="button" class="btn btn-line" id="cookieDecline">Decline</button>
+      <button type="button" class="btn btn-solid" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY = 'helloecom_cookie_consent';
+  var banner = document.getElementById('cookieBanner');
+  if(!banner) return;
+  var stored;
+  try { stored = localStorage.getItem(KEY); } catch(e) { stored = null; }
+  if(!stored){ banner.hidden = false; }
+  function setConsent(value){
+    try { localStorage.setItem(KEY, value); } catch(e) {}
+    banner.hidden = true;
+  }
+  var acceptBtn = document.getElementById('cookieAccept');
+  var declineBtn = document.getElementById('cookieDecline');
+  if(acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
+  if(declineBtn) declineBtn.addEventListener('click', function(){ setConsent('declined'); });
+})();
 </script>
 
 <script>
