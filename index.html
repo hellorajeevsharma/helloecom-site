@@ -11,8 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HelloEcom — Amazon Advertising &amp; Marketplace Management, Worldwide</title>
-<meta name="description" content="HelloEcom runs Amazon advertising, marketplace listings and websites for brands selling worldwide. 20+ channels, 8,000+ SKUs managed, run by a 16-year eCommerce operator.">
+<title>HelloEcom — eCommerce, Marketplace &amp; Digital Marketing Services, Worldwide</title>
+<meta name="description" content="HelloEcom runs Amazon and marketplace management, Shopify, Magento and WordPress builds, Google, Meta and Pinterest Ads, SEO and training for brands selling worldwide.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://helloecom.net/">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -22,16 +22,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#0D1620" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HelloEcom">
-<meta property="og:title" content="HelloEcom — Amazon Advertising & Marketplace Management, Worldwide">
-<meta property="og:description" content="HelloEcom runs Amazon advertising, marketplace listings and websites for brands selling worldwide. 20+ channels, 8,000+ SKUs managed, run by a 16-year eCommerce operator.">
+<meta property="og:title" content="HelloEcom — eCommerce, Marketplace & Digital Marketing Services, Worldwide">
+<meta property="og:description" content="HelloEcom runs Amazon and marketplace management, Shopify, Magento and WordPress builds, Google, Meta and Pinterest Ads, SEO and training for brands selling worldwide.">
 <meta property="og:url" content="https://helloecom.net/">
 <meta property="og:image" content="https://helloecom.net/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HelloEcom — Amazon Advertising & Marketplace Management, Worldwide">
-<meta name="twitter:description" content="HelloEcom runs Amazon advertising, marketplace listings and websites for brands selling worldwide. 20+ channels, 8,000+ SKUs managed, run by a 16-year eCommerce operator.">
+<meta name="twitter:title" content="HelloEcom — eCommerce, Marketplace & Digital Marketing Services, Worldwide">
+<meta name="twitter:description" content="HelloEcom runs Amazon and marketplace management, Shopify, Magento and WordPress builds, Google, Meta and Pinterest Ads, SEO and training for brands selling worldwide.">
 <meta name="twitter:image" content="https://helloecom.net/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -387,6 +387,25 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
   .nav-dropdown-menu::before{display:none}
   .nav-dropdown-menu a{padding:12px 0}
 }
+
+/* ---- home: service tiles, link lists, chips ---- */
+a.tile{display:block;text-decoration:none;color:inherit;transition:background .15s}
+a.tile:hover{background:var(--paper-2);outline:1px solid var(--green)}
+.tiles .tile b{font-size:1.05rem}
+.svc-links{list-style:none;padding-left:0}
+.svc-links li{padding:10px 0;border-top:1px solid var(--rule);margin:0}
+.svc-links a{text-decoration:none;display:block}
+.svc-links a b{font-family:"Bricolage Grotesque",sans-serif;color:var(--ink);border-bottom:2px solid var(--gold)}
+.training-strip{
+  margin-top:44px;padding:26px 28px;background:var(--tile);border-radius:2px;
+  display:grid;gap:18px;grid-template-columns:1fr;align-items:center;
+}
+@media(min-width:760px){.training-strip{grid-template-columns:1fr auto}}
+.training-strip h3{font-size:1.18rem}
+.training-strip p{margin:8px 0 0;color:var(--ink-soft);max-width:60ch}
+.market-chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.market-chips span{background:var(--tile);padding:8px 16px;border-radius:2px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:0.95rem}
+.market-chips .chip-more{background:transparent;border:1px dashed var(--ink-soft);color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -401,81 +420,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <section class="wrap hero">
     <div>
-      <div class="eyebrow-free">Amazon advertising &amp; marketplace management</div>
-      <h1>We run the parts of your online store you don't have time for.</h1>
-      <p class="hero-lede">Amazon advertising, marketplace listings, and the website behind them — kept in step across <strong>20+ selling channels worldwide</strong>, for brands that would rather sell than manage feeds.</p>
+      <div class="eyebrow-free">eCommerce, marketplaces &amp; digital marketing</div>
+      <h1>Everything your online store needs to sell, from one team.</h1>
+      <p class="hero-lede">Marketplaces, store builds, paid ads, SEO and training — <strong>nine services under one roof</strong>, run hands-on for brands selling worldwide, so your channels grow together instead of in separate silos.</p>
       <div class="hero-actions">
         <a class="btn btn-solid" href="contact.html">Get a quote</a>
-        <a class="btn btn-line" href="#services">See our services</a>
+        <a class="btn btn-line" href="#services">See all services</a>
       </div>
     </div>
 
     <div class="markets">
-      <div class="markets-title">Where we currently run accounts</div>
-      <p class="markets-note">Listings, pricing and ads maintained market by market, not copy-pasted — and built to extend to wherever you sell next.</p>
+      <div class="markets-title">What we do</div>
+      <p class="markets-note">Pick a service for the detail — or tell us the goal and we'll put the right mix together.</p>
       <div class="tiles">
-        <div class="tile"><b>UK</b><span>United Kingdom</span></div>
-        <div class="tile"><b>DE</b><span>Germany</span></div>
-        <div class="tile"><b>FR</b><span>France</span></div>
-        <div class="tile"><b>ES</b><span>Spain</span></div>
-        <div class="tile"><b>IT</b><span>Italy</span></div>
-        <div class="tile"><b>NL</b><span>Netherlands</span></div>
-        <div class="tile"><b>BE</b><span>Belgium</span></div>
-        <div class="tile"><b>SE</b><span>Sweden</span></div>
-        <div class="tile"><b>PL</b><span>Poland</span></div>
-        <div class="tile"><b>IN</b><span>India</span></div>
-        <div class="tile tile-more"><b>+</b><span>New markets on request</span></div>
+        <a class="tile" href="amazon-services.html"><b>Amazon</b><span>Ads, listings, account care</span></a>
+        <a class="tile" href="marketplaces.html"><b>Marketplaces</b><span>eBay, Walmart, Flipkart &amp; more</span></a>
+        <a class="tile" href="shopify-services.html"><b>Shopify</b><span>Build, migrate, optimise</span></a>
+        <a class="tile" href="magento.html"><b>Magento</b><span>Build &amp; manage</span></a>
+        <a class="tile" href="wordpress-services.html"><b>WordPress</b><span>Design &amp; development</span></a>
+        <a class="tile" href="google-ads.html"><b>Google Ads</b><span>Search, Shopping, PMax</span></a>
+        <a class="tile" href="social-ads.html"><b>Meta &amp; Pinterest</b><span>Paid social ads</span></a>
+        <a class="tile" href="seo-services.html"><b>SEO</b><span>Plus AEO &amp; GEO</span></a>
+        <a class="tile" href="digital-marketing-training.html"><b>Training</b><span>Digital marketing courses</span></a>
       </div>
     </div>
   </section>
 
   <section class="band" id="services">
     <div class="wrap">
-      <h2>Three services that only work together</h2>
-      <p class="band-intro">Ads that spend well on a badly built listing lose money. A fast site with no demand behind it does nothing. We run all three so they stop working against each other.</p>
+      <h2>One team across the whole funnel</h2>
+      <p class="band-intro">A great ad on a weak listing wastes money. A fast store with no traffic does nothing. We cover the whole path — where you sell, how it's built, and how people find it — so the pieces work with each other.</p>
 
       <div class="caps">
         <div class="cap">
-          <h3>Amazon advertising</h3>
-          <p>Full Seller Central ad management across your marketplaces worldwide, built around margin rather than ACoS alone.</p>
-          <ul>
-            <li>Sponsored Products, Brands, Video and Display</li>
-            <li>Keyword harvesting, negatives and bid rules</li>
-            <li>Budget splits by market and by margin</li>
-            <li>Weekly reporting your team can act on</li>
+          <h3>Sell on marketplaces</h3>
+          <p>Get your catalogue live, correct and competitive on the channels where shoppers already are.</p>
+          <ul class="svc-links">
+            <li><a href="amazon-services.html"><b>Amazon services</b></a> Seller Central ads, listings, A+ content, account health and Buy Box.</li>
+            <li><a href="marketplaces.html"><b>Other marketplaces</b></a> eBay, Walmart, Etsy, Flipkart, Meesho, Myntra and more — launched and managed.</li>
           </ul>
         </div>
         <div class="cap">
-          <h3>Marketplace management</h3>
-          <p>Getting your catalogue listed correctly, translated sensibly and selling on channels that each want something different.</p>
-          <ul>
-            <li>Listing creation, A+ content and variations</li>
-            <li>Feed and repricing management</li>
-            <li>Buy Box, account health and case handling</li>
-            <li>New marketplace launches from scratch</li>
+          <h3>Build your own store</h3>
+          <p>A direct channel you own, built for speed, search and conversion rather than just looks.</p>
+          <ul class="svc-links">
+            <li><a href="shopify-services.html"><b>Shopify</b></a> Store setup, themes, apps, migration and ongoing optimisation.</li>
+            <li><a href="magento.html"><b>Magento</b></a> Store build, upgrades, extensions and day-to-day management.</li>
+            <li><a href="wordpress-services.html"><b>WordPress</b></a> Business sites and WooCommerce design and development.</li>
           </ul>
         </div>
         <div class="cap">
-          <h3>Website &amp; technical SEO</h3>
-          <p>Your direct channel, worked on alongside your developers rather than handed to them as a brief.</p>
-          <ul>
-            <li>Site speed, crawlability, schema and indexation</li>
-            <li>Category and product page structure</li>
-            <li>Google Ads, Shopping and Meta campaigns</li>
-            <li>Tracking, GA4 and conversion measurement</li>
+          <h3>Drive traffic &amp; demand</h3>
+          <p>Paid and organic visibility, measured against margin, not vanity metrics.</p>
+          <ul class="svc-links">
+            <li><a href="google-ads.html"><b>Google Ads</b></a> Search, Shopping, Performance Max and YouTube campaigns.</li>
+            <li><a href="social-ads.html"><b>Meta &amp; Pinterest Ads</b></a> Prospecting, retargeting and catalogue ads on social.</li>
+            <li><a href="seo-services.html"><b>SEO, AEO &amp; GEO</b></a> Technical and content SEO, plus visibility in AI answers.</li>
           </ul>
         </div>
       </div>
-      <p class="band-intro" style="margin-top:30px">Full detail on <a href="amazon-services.html" style="border-bottom:2px solid var(--gold);text-decoration:none">Amazon services</a>, <a href="marketplaces.html" style="border-bottom:2px solid var(--gold);text-decoration:none">other marketplaces</a>, and <a href="magento.html" style="border-bottom:2px solid var(--gold);text-decoration:none">Magento store build &amp; management</a> each have their own page.</p>
+
+      <div class="training-strip">
+        <div>
+          <h3>Digital Marketing Training</h3>
+          <p>Want your own team to do it? Practical, hands-on training in Amazon, ads, SEO and eCommerce operations, taught by the people who run these accounts daily.</p>
+        </div>
+        <a class="btn btn-line" href="digital-marketing-training.html">Explore training</a>
+      </div>
     </div>
   </section>
 
   <section class="band" id="results">
     <div class="wrap">
       <h2>What clients get run through us</h2>
-      <p class="band-intro">The figures below are from the accounts we currently manage.</p>
+      <p class="band-intro">Figures from the accounts we currently manage.</p>
 
       <div class="ledger">
+        <div class="ledger-row">
+          <div class="figure">£550K</div>
+          <p>Average monthly online revenue delivered, up from £475K — a 16% lift with no added headcount on the client side.</p>
+        </div>
         <div class="ledger-row">
           <div class="figure">£50K</div>
           <p>Monthly Amazon Ads spend managed across Sponsored Products, Brands and Display, held at a TACoS under 10%.</p>
@@ -483,10 +507,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="ledger-row">
           <div class="figure">£40K</div>
           <p>Monthly Google Ads spend for direct websites, running at roughly 15% TACoS alongside Meta campaigns.</p>
-        </div>
-        <div class="ledger-row">
-          <div class="figure">£550K</div>
-          <p>Average monthly online revenue delivered, up from £475K — a 16% lift with no added headcount on the client side.</p>
         </div>
         <div class="ledger-row">
           <div class="figure">8,000+</div>
@@ -500,6 +520,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <section class="band" id="markets">
+    <div class="wrap">
+      <h2>Working across markets</h2>
+      <p class="band-intro">Listings, pricing and campaigns are maintained market by market, not copy-pasted — and built to extend to wherever you sell next.</p>
+      <div class="market-chips">
+        <span>UK</span><span>Germany</span><span>France</span><span>Spain</span><span>Italy</span><span>Netherlands</span><span>Belgium</span><span>Sweden</span><span>Poland</span><span>India</span><span class="chip-more">+ new markets on request</span>
+      </div>
+    </div>
+  </section>
+
   <section class="band" id="how">
     <div class="wrap">
       <h2>How an engagement runs</h2>
@@ -507,22 +537,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="step">
           <div class="step-no">1</div>
           <h3>Audit</h3>
-          <p>We go through your current listings, ad accounts and site to find what's costing you money.</p>
+          <p>We review your marketplaces, store, ad accounts and search presence to find what's costing you money or holding growth back.</p>
         </div>
         <div class="step">
           <div class="step-no">2</div>
           <h3>Plan</h3>
-          <p>A market-by-market plan for listings, advertising and site fixes, with the sequence and the budget attached.</p>
+          <p>A prioritised plan across the services you need — sequence, owners and budget attached — so nothing is done in isolation.</p>
         </div>
         <div class="step">
           <div class="step-no">3</div>
           <h3>Run</h3>
-          <p>We manage the accounts directly — listings, ad platforms, and coordination with your developers.</p>
+          <p>We manage the work directly: listings, builds, campaigns and SEO, coordinating with your developers and team.</p>
         </div>
         <div class="step">
           <div class="step-no">4</div>
           <h3>Report</h3>
-          <p>Weekly numbers, in plain terms: what moved, what we changed, what's next.</p>
+          <p>Regular numbers in plain terms: what moved, what we changed, what's next.</p>
         </div>
       </div>
     </div>
@@ -532,7 +562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <h2>Who's running it</h2>
       <div class="founder-bio" style="max-width:68ch">
-        <p>HelloEcom is run by operators who manage Amazon Seller Central, Google Ads, Meta Ads and Magento builds directly — not account managers relaying instructions to a subcontractor. HelloEcom is built around sixteen years of running eCommerce operations for brands selling worldwide, currently leading strategy for three brands and, before that, twenty-plus client accounts. Every engagement is run hands-on, not handed off after the pitch.</p>
+        <p>HelloEcom is run by operators who manage Amazon Seller Central, Google Ads, Meta Ads, SEO and Shopify, Magento and WordPress builds directly — not account managers relaying instructions to a subcontractor. It is built around sixteen years of running eCommerce operations for brands selling worldwide. Every engagement is run hands-on, not handed off after the pitch.</p>
         <p><a href="about.html" style="color:var(--green);border-bottom:1px solid var(--rule);text-decoration:none">Read more about how we work &rarr;</a></p>
       </div>
     </div>
@@ -540,8 +570,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="contact" id="contact">
     <div class="wrap">
-      <h2>Tell us what's stuck.</h2>
-      <p>Whether it's ad spend that won't come down, a marketplace launch that keeps slipping, or a site your developers and marketing team disagree about — reach out and we'll tell you what we'd do first.</p>
+      <h2>Tell us what you want to grow.</h2>
+      <p>Whether it's ad spend that won't come down, a marketplace launch that keeps slipping, a store rebuild, or a team that needs training — reach out and we'll tell you what we'd do first.</p>
       <div class="hero-actions">
         <a class="btn btn-solid" href="contact.html">Get a quote</a>
       </div>
@@ -549,6 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 </main>
+
 
 <div id="site-footer"></div>
 
