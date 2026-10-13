@@ -1,4 +1,11 @@
 <head>
+<!-- Google Consent Mode v2: default = denied until the visitor accepts (must stay ABOVE the GTM snippet) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','analytics_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+try{ if(localStorage.getItem('helloecom_cookie_consent')==='accepted'){ gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'}); } }catch(e){}
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -701,7 +708,7 @@ document.addEventListener('keydown', function(e){
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie notice" hidden>
   <div class="cookie-banner-inner">
-    <p>We use cookies to run this site and to understand how it's used. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <p>We use cookies to run this site and, only with your consent, for analytics and advertising measurement. See our <a href="privacy.html">Privacy Policy</a> and <a href="cookie-policy.html">Cookie Policy</a> for details.</p>
     <div class="cookie-banner-actions">
       <button type="button" class="btn btn-line" id="cookieDecline">Decline</button>
       <button type="button" class="btn btn-solid" id="cookieAccept">Accept</button>
@@ -713,17 +720,29 @@ document.addEventListener('keydown', function(e){
   var KEY = 'helloecom_cookie_consent';
   var banner = document.getElementById('cookieBanner');
   if(!banner) return;
+  function updateConsent(granted){
+    var v = granted ? 'granted' : 'denied';
+    if(typeof gtag === 'function'){
+      gtag('consent','update',{'ad_storage':v,'analytics_storage':v,'ad_user_data':v,'ad_personalization':v});
+    }
+  }
   var stored;
   try { stored = localStorage.getItem(KEY); } catch(e) { stored = null; }
   if(!stored){ banner.hidden = false; }
   function setConsent(value){
     try { localStorage.setItem(KEY, value); } catch(e) {}
+    updateConsent(value === 'accepted');
     banner.hidden = true;
   }
   var acceptBtn = document.getElementById('cookieAccept');
   var declineBtn = document.getElementById('cookieDecline');
   if(acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
   if(declineBtn) declineBtn.addEventListener('click', function(){ setConsent('declined'); });
+  /* "Cookie settings" link in the footer re-opens the banner so visitors can change their choice */
+  document.addEventListener('click', function(e){
+    var l = e.target.closest ? e.target.closest('[data-cookie-settings]') : null;
+    if(l){ e.preventDefault(); banner.hidden = false; }
+  });
 })();
 </script>
 
