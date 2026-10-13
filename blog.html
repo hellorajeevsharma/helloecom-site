@@ -20,9 +20,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="Practical guides on Amazon, marketplaces, Shopify, Magento, Google Ads and SEO (including AEO and GEO) from the HelloEcom team.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://helloecom.net/blog.html">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HelloEcom">
 <meta property="og:title" content="HelloEcom Blog — eCommerce, Amazon, SEO & Ads Guides">
@@ -524,31 +524,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="wrap blog-list">
       <article class="post-card">
         <div class="post-tag">Amazon Advertising</div>
-        <h2><a href="/blog/amazon-acos-vs-tacos.html">Amazon ACoS vs TACoS: Which Number Should You Watch?</a></h2>
+        <h2><a href="blog/amazon-acos-vs-tacos.html">Amazon ACoS vs TACoS: Which Number Should You Watch?</a></h2>
         <p>ACoS shows how efficient your ads are. TACoS shows how your whole business is doing. Here is how to use both without being misled by either.</p>
         <p class="post-meta">13 October 2026 &middot; 3 min read</p>
       </article>
       <article class="post-card">
         <div class="post-tag">SEO, AEO &amp; GEO</div>
-        <h2><a href="/blog/aeo-geo-checklist-for-ecommerce.html">AEO and GEO: A Practical Checklist for eCommerce Brands</a></h2>
+        <h2><a href="blog/aeo-geo-checklist-for-ecommerce.html">AEO and GEO: A Practical Checklist for eCommerce Brands</a></h2>
         <p>How to get your eCommerce brand found and cited in answer boxes and AI tools like ChatGPT, Perplexity and Gemini, with a checklist you can work through.</p>
         <p class="post-meta">13 October 2026 &middot; 3 min read</p>
       </article>
       <article class="post-card">
         <div class="post-tag">Amazon &amp; Marketplaces</div>
-        <h2><a href="/blog/amazon-uk-eu-launch-checklist.html">Launching on Amazon UK and Europe: A Pre-Launch Checklist</a></h2>
+        <h2><a href="blog/amazon-uk-eu-launch-checklist.html">Launching on Amazon UK and Europe: A Pre-Launch Checklist</a></h2>
         <p>A practical checklist for selling on Amazon UK and the EU marketplaces: account and brand, compliance, listings, fulfilment, pricing and ads.</p>
         <p class="post-meta">13 October 2026 &middot; 3 min read</p>
       </article>
       <article class="post-card">
         <div class="post-tag">Store Platforms</div>
-        <h2><a href="/blog/shopify-vs-magento.html">Shopify or Magento? How to Choose the Right Platform</a></h2>
+        <h2><a href="blog/shopify-vs-magento.html">Shopify or Magento? How to Choose the Right Platform</a></h2>
         <p>A plain comparison of Shopify and Magento for growing eCommerce brands: cost shape, flexibility, maintenance and when each one makes sense.</p>
         <p class="post-meta">13 October 2026 &middot; 3 min read</p>
       </article>
       <article class="post-card">
         <div class="post-tag">Google Ads</div>
-        <h2><a href="/blog/google-merchant-center-feed-errors.html">Common Google Merchant Center Feed Errors and How to Fix Them</a></h2>
+        <h2><a href="blog/google-merchant-center-feed-errors.html">Common Google Merchant Center Feed Errors and How to Fix Them</a></h2>
         <p>Products disapproved in Google Merchant Center? These are the most common feed errors for Shopping and Performance Max, with the fix for each.</p>
         <p class="post-meta">13 October 2026 &middot; 3 min read</p>
       </article>
@@ -593,7 +593,7 @@ document.addEventListener('keydown', function(e){
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie notice" hidden>
   <div class="cookie-banner-inner">
-    <p>We use cookies to run this site and, only with your consent, for analytics and advertising measurement. See our <a href="/privacy.html">Privacy Policy</a> and <a href="/cookie-policy.html">Cookie Policy</a> for details.</p>
+    <p>We use cookies to run this site and, only with your consent, for analytics and advertising measurement. See our <a href="privacy.html">Privacy Policy</a> and <a href="cookie-policy.html">Cookie Policy</a> for details.</p>
     <div class="cookie-banner-actions">
       <button type="button" class="btn btn-line" id="cookieDecline">Decline</button>
       <button type="button" class="btn btn-solid" id="cookieAccept">Accept</button>
@@ -632,16 +632,11 @@ document.addEventListener('keydown', function(e){
 </script>
 
 <script>
-  /* Absolute paths: this page is served from any URL that 404s, so relative links would break. */
-  function absolutise(html){
-    return html.replace(/(href|src)="(?!https?:|mailto:|tel:|#|\/)([^"]*)"/g,'$1="/$2"');
-  }
-  fetch('/header.html').then(function(r){ return r.text(); }).then(function(html){
-    document.getElementById('site-header').outerHTML = absolutise(html);
+  fetch('header.html').then(function(r){ return r.text(); }).then(function(html){
+    document.getElementById('site-header').outerHTML = html;
   }).catch(function(err){ console.error('Could not load header:', err); });
-
-  fetch('/footer.html').then(function(r){ return r.text(); }).then(function(html){
-    document.getElementById('site-footer').outerHTML = absolutise(html);
+  fetch('footer.html').then(function(r){ return r.text(); }).then(function(html){
+    document.getElementById('site-footer').outerHTML = html;
   }).catch(function(err){ console.error('Could not load footer:', err); });
 </script>
 </body>
