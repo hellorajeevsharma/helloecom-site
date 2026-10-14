@@ -1,0 +1,32 @@
+# HelloEcom
+
+> HelloEcom is a UK & EU-built eCommerce operator working with brands worldwide. One accountable team runs Amazon and marketplace management, Shopify, Magento and WordPress stores, Google, Meta and Pinterest Ads, SEO (including AEO and GEO) and digital marketing training. Offices in Birmingham (UK) and Gurugram (India). Contact: connect@helloecom.net
+
+## Services
+- [Amazon services](https://helloecom.net/amazon-services.html): Seller Central advertising, listing creation and optimisation, A+ content, account health and reporting.
+- [Marketplaces](https://helloecom.net/marketplaces.html): Listing and management on eBay, Walmart, Etsy, Bol.com, Flipkart, Meesho, Myntra and other marketplaces.
+- [Shopify services](https://helloecom.net/shopify-services.html): Shopify design, development, migration and Shopify SEO (duplicate URLs, speed, collection and product pages, structured data).
+- [Magento](https://helloecom.net/magento.html): Magento store build, advanced Magento SEO, and admin panel and product listing management.
+- [WordPress design & development](https://helloecom.net/wordpress-services.html): WordPress and WooCommerce websites.
+- [Google Ads](https://helloecom.net/google-ads.html): Search, Shopping and Performance Max campaigns, Merchant Center feed management.
+- [Meta & Pinterest Ads](https://helloecom.net/social-ads.html): Paid social prospecting, retargeting and catalogue ads.
+- [SEO services](https://helloecom.net/seo-services.html): Technical, on-page and agentic SEO, plus Answer Engine (AEO) and Generative Engine (GEO) optimisation, and specialist Shopify SEO and Magento SEO.
+- [Digital Marketing Training](https://helloecom.net/digital-marketing-training.html): Training in Amazon Ads, Google Ads, Meta Ads and advanced SEO.
+
+## Company
+- [Home](https://helloecom.net/): Overview of all services.
+- [About](https://helloecom.net/about.html): Vision, mission and how HelloEcom works.
+- [Contact](https://helloecom.net/contact.html): Enquiry form and office details.
+
+## Blog
+- [Blog](https://helloecom.net/blog.html): Practical guides on Amazon, marketplaces, store platforms, ads and search.
+- [Amazon ACoS vs TACoS: Which Number Should You Watch?](https://helloecom.net/blog/amazon-acos-vs-tacos.html): ACoS shows how efficient your ads are. TACoS shows how your whole business is doing. Here is how to use both without being misled by either.
+- [AEO and GEO: A Practical Checklist for eCommerce Brands](https://helloecom.net/blog/aeo-geo-checklist-for-ecommerce.html): How to get your eCommerce brand found and cited in answer boxes and AI tools like ChatGPT, Perplexity and Gemini, with a checklist you can work through.
+- [Launching on Amazon UK and Europe: A Pre-Launch Checklist](https://helloecom.net/blog/amazon-uk-eu-launch-checklist.html): A practical checklist for selling on Amazon UK and the EU marketplaces: account and brand, compliance, listings, fulfilment, pricing and ads.
+- [Shopify or Magento? How to Choose the Right Platform](https://helloecom.net/blog/shopify-vs-magento.html): A plain comparison of Shopify and Magento for growing eCommerce brands: cost shape, flexibility, maintenance and when each one makes sense.
+- [Common Google Merchant Center Feed Errors and How to Fix Them](https://helloecom.net/blog/google-merchant-center-feed-errors.html): Products disapproved in Google Merchant Center? These are the most common feed errors for Shopping and Performance Max, with the fix for each.
+
+## Policies
+- [Privacy Policy](https://helloecom.net/privacy.html)
+- [Terms & Conditions](https://helloecom.net/terms.html)
+- [Cookie Policy](https://helloecom.net/cookie-policy.html)
