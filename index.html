@@ -414,6 +414,32 @@ a.tile:hover{background:var(--paper-2);outline:1px solid var(--green)}
 .market-chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
 .market-chips span{background:var(--tile);padding:8px 16px;border-radius:2px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:0.95rem}
 .market-chips .chip-more{background:transparent;border:1px dashed var(--ink-soft);color:var(--ink-soft)}
+
+/* ---- home hero with background video ---- */
+.hero-video{
+  position:relative;overflow:hidden;isolation:isolate;color:#F2F3F1;
+  background:#0D1620 url(hero-poster.jpg) center/cover no-repeat;
+  --paper:#0D1620; --paper-2:rgba(255,255,255,.16); --ink:#F2F3F1; --ink-soft:#C6D3DC;
+  --green:#4FBE9D; --gold:#E7C25C; --rule:rgba(255,255,255,.28); --tile:rgba(255,255,255,.09);
+}
+.hero-video-el{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero-video-shade{position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(8,15,24,.70) 0%,rgba(8,15,24,.34) 55%,rgba(8,15,24,.42) 100%)}
+.hero-video .hero{padding-top:92px;padding-bottom:88px}
+.hero-video .tile{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12)}
+.hero-video .markets{border-top-color:rgba(255,255,255,.7)}
+.hero-video .btn-solid{color:#0D1620}
+.hero-video-toggle{
+  position:absolute;right:20px;bottom:16px;z-index:2;cursor:pointer;
+  background:rgba(8,15,24,.55);color:#F2F3F1;border:1px solid rgba(255,255,255,.35);
+  font:600 .8rem "Bricolage Grotesque",sans-serif;padding:6px 12px;border-radius:999px;
+}
+.hero-video-toggle:hover{background:rgba(8,15,24,.8)}
+.hero-video.no-video .hero-video-toggle{display:none}
+@media(max-width:780px){
+  .hero-video .hero{padding-top:56px;padding-bottom:64px}
+  .hero-video-shade{background:rgba(8,15,24,.66)}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -484,32 +510,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="site-header"></div>
 
 <main>
-  <section class="wrap hero">
-    <div>
-      <div class="eyebrow-free">eCommerce, marketplaces &amp; digital marketing</div>
-      <h1>Everything your online store needs to sell, from one team.</h1>
-      <p class="hero-lede">Marketplaces, store builds, paid ads, SEO and training — <strong>nine services under one roof</strong>, run hands-on for brands selling worldwide, so your channels grow together instead of in separate silos.</p>
-      <div class="hero-actions">
-        <a class="btn btn-solid" href="contact.html">Get a quote</a>
-        <a class="btn btn-line" href="#services">See all services</a>
+  <section class="hero-video">
+    <video class="hero-video-el" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="hero-bg.webm" type="video/webm">
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
+    <script>
+      /* Respect "reduce motion" and data-saver: no video, the poster image stays as the background. */
+      (function(){
+        var v=document.querySelector('.hero-video-el');
+        var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var sd=navigator.connection&&navigator.connection.saveData;
+        if(v&&(rm||sd)){v.parentNode.classList.add('no-video');v.parentNode.removeChild(v);}
+      })();
+    </script>
+    <div class="hero-video-shade"></div>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow-free">eCommerce, marketplaces &amp; digital marketing</div>
+        <h1>Everything your online store needs to sell, from one team.</h1>
+        <p class="hero-lede">Marketplaces, store builds, paid ads, SEO and training — <strong>nine services under one roof</strong>, run hands-on for brands selling worldwide, so your channels grow together instead of in separate silos.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="contact.html">Get a quote</a>
+          <a class="btn btn-line" href="#services">See all services</a>
+        </div>
       </div>
-    </div>
-
-    <div class="markets">
-      <div class="markets-title">What we do</div>
-      <p class="markets-note">Pick a service for the detail — or tell us the goal and we'll put the right mix together.</p>
-      <div class="tiles">
-        <a class="tile" href="amazon-services.html"><b>Amazon</b><span>Ads, listings, account care</span></a>
-        <a class="tile" href="marketplaces.html"><b>Marketplaces</b><span>eBay, Walmart, Flipkart &amp; more</span></a>
-        <a class="tile" href="shopify-services.html"><b>Shopify</b><span>Build, migrate, optimise</span></a>
-        <a class="tile" href="magento.html"><b>Magento</b><span>Build &amp; manage</span></a>
-        <a class="tile" href="wordpress-services.html"><b>WordPress</b><span>Design &amp; development</span></a>
-        <a class="tile" href="google-ads.html"><b>Google Ads</b><span>Search, Shopping, PMax</span></a>
-        <a class="tile" href="social-ads.html"><b>Meta &amp; Pinterest</b><span>Paid social ads</span></a>
-        <a class="tile" href="seo-services.html"><b>SEO</b><span>Plus AEO &amp; GEO</span></a>
-        <a class="tile" href="digital-marketing-training.html"><b>Training</b><span>Digital marketing courses</span></a>
+  
+      <div class="markets">
+        <div class="markets-title">What we do</div>
+        <p class="markets-note">Pick a service for the detail — or tell us the goal and we'll put the right mix together.</p>
+        <div class="tiles">
+          <a class="tile" href="amazon-services.html"><b>Amazon</b><span>Ads, listings, account care</span></a>
+          <a class="tile" href="marketplaces.html"><b>Marketplaces</b><span>eBay, Walmart, Flipkart &amp; more</span></a>
+          <a class="tile" href="shopify-services.html"><b>Shopify</b><span>Build, migrate, optimise</span></a>
+          <a class="tile" href="magento.html"><b>Magento</b><span>Build &amp; manage</span></a>
+          <a class="tile" href="wordpress-services.html"><b>WordPress</b><span>Design &amp; development</span></a>
+          <a class="tile" href="google-ads.html"><b>Google Ads</b><span>Search, Shopping, PMax</span></a>
+          <a class="tile" href="social-ads.html"><b>Meta &amp; Pinterest</b><span>Paid social ads</span></a>
+          <a class="tile" href="seo-services.html"><b>SEO</b><span>Plus AEO &amp; GEO</span></a>
+          <a class="tile" href="digital-marketing-training.html"><b>Training</b><span>Digital marketing courses</span></a>
+        </div>
       </div>
-    </div>
+    </section>
+    <button type="button" class="hero-video-toggle" id="heroVideoToggle" aria-label="Pause background video">Pause video</button>
   </section>
 
   <section class="band" id="services">
@@ -731,6 +774,17 @@ document.addEventListener('keydown', function(e){
   fetch('footer.html').then(function(r){ return r.text(); }).then(function(html){
     document.getElementById('site-footer').outerHTML = html;
   }).catch(function(err){ console.error('Could not load footer:', err); });
+</script>
+
+<script>
+(function(){
+  var btn=document.getElementById('heroVideoToggle'), v=document.querySelector('.hero-video-el');
+  if(!btn||!v){ if(btn) btn.style.display='none'; return; }
+  btn.addEventListener('click',function(){
+    if(v.paused){ v.play(); btn.textContent='Pause video'; btn.setAttribute('aria-label','Pause background video'); }
+    else{ v.pause(); btn.textContent='Play video'; btn.setAttribute('aria-label','Play background video'); }
+  });
+})();
 </script>
 </body>
 </html>
