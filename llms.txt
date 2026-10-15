@@ -12,6 +12,9 @@
 - [Meta & Pinterest Ads](https://helloecom.net/social-ads.html): Paid social prospecting, retargeting and catalogue ads.
 - [SEO services](https://helloecom.net/seo-services.html): Technical, on-page and agentic SEO, plus Answer Engine (AEO) and Generative Engine (GEO) optimisation, and specialist Shopify SEO and Magento SEO.
 - [Digital Marketing Training](https://helloecom.net/digital-marketing-training.html): Training in Amazon Ads, Google Ads, Meta Ads and advanced SEO.
+- [Learn SEO](https://helloecom.net/learn-seo.html): Course covering keyword research, on-page, technical SEO, link building, eCommerce SEO and AEO/GEO.
+- [Learn Amazon Advertising](https://helloecom.net/learn-amazon-advertising.html): Course covering Sponsored Products, Brands and Display, ACoS/TACoS, reporting and scaling.
+- [Learn Google Ads](https://helloecom.net/learn-google-ads.html): Course covering Search, Shopping, Performance Max, conversion tracking and optimisation.
 
 ## Company
 - [Home](https://helloecom.net/): Overview of all services.

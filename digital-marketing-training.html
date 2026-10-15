@@ -408,6 +408,12 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
   .nav-dropdown-menu::before{display:none}
   .nav-dropdown-menu a{padding:12px 0}
 }
+.learn-cards{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:820px){.learn-cards{grid-template-columns:repeat(3,1fr)}}
+.learn-card{background:var(--tile);padding:22px 22px 20px;border-radius:4px}
+.learn-card h3{font-size:1.1rem;margin-bottom:8px}
+.learn-card p{margin:0;font-size:.98rem;color:var(--ink-soft)}
+.learn-card a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}
 </style>
 <script type="application/ld+json">
 {
@@ -510,6 +516,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-actions">
         <a class="btn btn-solid" href="contact.html">Let's talk</a>
         <a class="btn btn-line" href="#services">See what's included</a>
+        <a class="btn btn-line" href="#learn">Learn courses</a>
       </div>
     </div>
 
@@ -521,6 +528,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="tile"><b>Google Ads</b><span>Search, Shopping and Performance Max, built around how customers actually search</span></div>
         <div class="tile"><b>Meta Ads</b><span>Facebook and Instagram campaigns, from setup to creative testing</span></div>
         <div class="tile"><b>Advanced SEO</b><span>Technical, on-page and content SEO beyond the basics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="learn">
+    <div class="wrap">
+      <h2>Learn it step by step</h2>
+      <p class="band-intro">Learning on your own, as a student or career-switcher? Our dedicated courses take you from the basics to a finished project, with live sessions, real work and an enquiry form on each page.</p>
+      <div class="learn-cards" style="margin-top:34px">
+        <div class="learn-card"><h3>Learn SEO</h3><p>Keyword research, on-page, technical SEO, link building, eCommerce SEO and AEO/GEO.</p><p style="margin-top:12px"><a href="learn-seo.html"><b>See the course &rarr;</b></a></p></div>
+        <div class="learn-card"><h3>Learn Amazon Advertising</h3><p>Sponsored Products, Brands and Display, ACoS and TACoS, reporting and scaling.</p><p style="margin-top:12px"><a href="learn-amazon-advertising.html"><b>See the course &rarr;</b></a></p></div>
+        <div class="learn-card"><h3>Learn Google Ads</h3><p>Search, Shopping, Performance Max, conversion tracking and optimisation.</p><p style="margin-top:12px"><a href="learn-google-ads.html"><b>See the course &rarr;</b></a></p></div>
       </div>
     </div>
   </section>
