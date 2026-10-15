@@ -483,6 +483,17 @@ footer{padding:26px 0 40px;color:var(--ink-soft);font-size:0.92rem;display:flex;
 .contact .contact-form{max-width:none}
 .contact .field label{color:var(--ink)}
 .contact p.form-status{max-width:none;margin:0}
+.hero-form{background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:24px 24px 26px}
+.hero-form h2{font-size:1.35rem;max-width:none}
+.hero-form .contact-form{margin-top:16px;gap:14px}
+.quick-connect{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.icon-btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:.95rem;padding:10px 16px 10px 12px;border-radius:100px;border:1px solid var(--rule);color:var(--ink);background:var(--paper)}
+.icon-btn svg{width:22px;height:22px;flex:none}
+.icon-btn.wa svg{color:#1FA855}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#1FA855;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.wa-float svg{width:30px;height:30px}
+.wa-float:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.path-fig{max-width:560px;margin-top:34px}
 .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .badge-row span{background:var(--tile);border-radius:100px;padding:5px 13px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:.82rem;color:var(--ink-soft)}
 </style>
@@ -622,14 +633,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1>Learn SEO by doing it on real pages.</h1>
       <p class="hero-lede">A practical SEO course for students, career-switchers, freelancers and store owners. You learn how search works, then apply it: keywords, on-page, technical fixes, links, and how to show up in AI answers too.</p>
       <div class="hero-actions">
-        <a class="btn btn-solid" href="#enquire">Enquire about this course</a>
+        <a class="btn btn-solid" href="#enquire-top">Enquire now</a>
         <a class="btn btn-line" href="#curriculum">See the curriculum</a>
+      </div>
+      <div class="quick-connect">
+        <a class="icon-btn wa" data-whatsapp data-wa-text="Hi HelloEcom, I would like to know more about Learn SEO." href="#" hidden target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.1-.5-.3z"/></svg><span>WhatsApp</span></a>
+        <a class="icon-btn" href="mailto:connect@helloecom.net?subject=Learn%20SEO%20enquiry" aria-label="Email HelloEcom"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>connect@helloecom.net</span></a>
       </div>
       <div class="badge-row"><span>Live training</span><span>Real projects</span><span>Doubt support</span><span>Beginner to advanced</span></div>
     </div>
-    <div>
-      <div class="fig"><svg viewBox="0 0 480 280" role="img" aria-label="Learning path from foundations to a finished project"><rect class="bgr" x="0" y="0" width="480" height="280" rx="8"/><rect class="bar" x="28" y="172" width="94" height="60" rx="5"/><text class="t1" x="75" y="198" text-anchor="middle" font-size="14" font-weight="800">1</text><text class="t1" x="75" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Foundations</text><text class="t2" x="75" y="268" text-anchor="middle" font-size="10.5">How search works</text><rect class="bar" x="138" y="130" width="94" height="102" rx="5"/><text class="t1" x="185" y="156" text-anchor="middle" font-size="14" font-weight="800">2</text><text class="t1" x="185" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Practice</text><text class="t2" x="185" y="268" text-anchor="middle" font-size="10.5">Audit + keywords</text><rect class="bar" x="248" y="88" width="94" height="144" rx="5"/><text class="t1" x="295" y="114" text-anchor="middle" font-size="14" font-weight="800">3</text><text class="t1" x="295" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Live project</text><text class="t2" x="295" y="268" text-anchor="middle" font-size="10.5">Fix real pages</text><rect class="g" x="358" y="46" width="94" height="186" rx="5"/><text class="on-g" x="405" y="72" text-anchor="middle" font-size="14" font-weight="800">4</text><text class="t1" x="405" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Capstone</text><text class="t2" x="405" y="268" text-anchor="middle" font-size="10.5">Full SEO audit</text><path class="stau dash" d="M40 70 C150 60 270 40 420 22"/><circle class="au" cx="420" cy="22" r="6"/><text class="t2" x="30" y="60" font-size="11">Your skill level</text></svg></div>
-      <p class="fig-cap">Your path: learn it, practise it, apply it, then finish with a project you can show.</p>
+    <div class="hero-form" id="enquire-top">
+      <h2>Enquire about Learn SEO</h2>
+      <p style="margin:8px 0 0;color:var(--ink-soft);font-size:.98rem">Fill this in and we reply within one business day with batch, format and fee details.</p>
+      <form class="contact-form training-form" novalidate>
+          <input type="hidden" name="access_key" value="940d1cb3-fcc1-421c-bfb1-b33dc7268bd6">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+          <div class="form-row two">
+            <div class="field"><label for="tfn">First name</label><input id="tfn" name="first_name" type="text" autocomplete="given-name" required></div>
+            <div class="field"><label for="tln">Last name</label><input id="tln" name="last_name" type="text" autocomplete="family-name" required></div>
+          </div>
+          <div class="field"><label for="tem">Email</label><input id="tem" name="email" type="email" autocomplete="email" required></div>
+          <div class="field">
+            <label for="tph">Phone / WhatsApp number</label>
+            <div class="phone-row">
+              <select id="tcc" name="country_code" aria-label="Country code">
+              <option value="+91" selected>India (+91)</option>
+              <option value="+44" >UK (+44)</option>
+              <option value="+353">Ireland (+353)</option>
+              <option value="+49">Germany (+49)</option>
+              <option value="+33">France (+33)</option>
+              <option value="+34">Spain (+34)</option>
+              <option value="+39">Italy (+39)</option>
+              <option value="+31">Netherlands (+31)</option>
+              <option value="+32">Belgium (+32)</option>
+              <option value="+46">Sweden (+46)</option>
+              <option value="+48">Poland (+48)</option>
+              <option value="+45">Denmark (+45)</option>
+              <option value="+47">Norway (+47)</option>
+              <option value="+358">Finland (+358)</option>
+              <option value="+41">Switzerland (+41)</option>
+              <option value="+43">Austria (+43)</option>
+              <option value="+351">Portugal (+351)</option>
+              <option value="+420">Czechia (+420)</option>
+              <option value="+40">Romania (+40)</option>
+              <option value="+30">Greece (+30)</option>
+              <option value="+1">USA (+1)</option>
+              <option value="+1">Canada (+1)</option>
+              <option value="+92">Pakistan (+92)</option>
+              <option value="+880">Bangladesh (+880)</option>
+              <option value="+94">Sri Lanka (+94)</option>
+              <option value="+977">Nepal (+977)</option>
+              <option value="+971">UAE (+971)</option>
+              <option value="+966">Saudi Arabia (+966)</option>
+              <option value="+90">Turkey (+90)</option>
+              <option value="+20">Egypt (+20)</option>
+              <option value="+234">Nigeria (+234)</option>
+              <option value="+254">Kenya (+254)</option>
+              <option value="+27">South Africa (+27)</option>
+              <option value="+65">Singapore (+65)</option>
+              <option value="+852">Hong Kong (+852)</option>
+              <option value="+86">China (+86)</option>
+              <option value="+81">Japan (+81)</option>
+              <option value="+61">Australia (+61)</option>
+              <option value="+64">New Zealand (+64)</option>
+              <option value="+55">Brazil (+55)</option>
+              <option value="+52">Mexico (+52)</option>
+            </select>
+              <input id="tph" name="phone" type="tel" autocomplete="tel-national" required>
+            </div>
+          </div>
+          <div class="form-row two">
+            <div class="field"><label for="tco">Course</label><select id="tco" name="course" required><option value="Learn SEO" selected>Learn SEO</option><option value="Learn Amazon Advertising">Learn Amazon Advertising</option><option value="Learn Google Ads">Learn Google Ads</option></select></div>
+            <div class="field"><label for="tlv">Your level</label>
+              <select id="tlv" name="level" required>
+                <option value="">Select...</option>
+                <option>Complete beginner</option>
+                <option>Some experience</option>
+                <option>Working professional</option>
+                <option>Team or company enquiry</option>
+              </select></div>
+          </div>
+          <div class="field"><label for="tms">Anything we should know? (optional)</label><textarea id="tms" name="message" rows="3"></textarea></div>
+          <button type="submit" class="btn btn-solid">Send enquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
     </div>
   </section>
 
@@ -715,6 +802,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="step"><div class="step-no">3</div><h3>Get feedback</h3><p>We review your work, point out what to fix and explain the reasoning behind each change.</p></div>
         <div class="step"><div class="step-no">4</div><h3>Finish with a capstone</h3><p>You complete a project you can show to an employer, a client or your own team.</p></div>
       </div>
+      <div class="path-fig"><div class="fig"><svg viewBox="0 0 480 280" role="img" aria-label="Learning path from foundations to a finished project"><rect class="bgr" x="0" y="0" width="480" height="280" rx="8"/><rect class="bar" x="28" y="172" width="94" height="60" rx="5"/><text class="t1" x="75" y="198" text-anchor="middle" font-size="14" font-weight="800">1</text><text class="t1" x="75" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Foundations</text><text class="t2" x="75" y="268" text-anchor="middle" font-size="10.5">How search works</text><rect class="bar" x="138" y="130" width="94" height="102" rx="5"/><text class="t1" x="185" y="156" text-anchor="middle" font-size="14" font-weight="800">2</text><text class="t1" x="185" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Practice</text><text class="t2" x="185" y="268" text-anchor="middle" font-size="10.5">Audit + keywords</text><rect class="bar" x="248" y="88" width="94" height="144" rx="5"/><text class="t1" x="295" y="114" text-anchor="middle" font-size="14" font-weight="800">3</text><text class="t1" x="295" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Live project</text><text class="t2" x="295" y="268" text-anchor="middle" font-size="10.5">Fix real pages</text><rect class="g" x="358" y="46" width="94" height="186" rx="5"/><text class="on-g" x="405" y="72" text-anchor="middle" font-size="14" font-weight="800">4</text><text class="t1" x="405" y="252" text-anchor="middle" font-size="12.5" font-weight="700">Capstone</text><text class="t2" x="405" y="268" text-anchor="middle" font-size="10.5">Full SEO audit</text><path class="stau dash" d="M40 70 C150 60 270 40 420 22"/><circle class="au" cx="420" cy="22" r="6"/><text class="t2" x="30" y="60" font-size="11">Your skill level</text></svg></div>
+      <p class="fig-cap">Your path: learn it, practise it, apply it, then finish with a project you can show.</p></div>
       <div class="learn-links">
         <a href="learn-amazon-advertising.html">Learn Amazon Advertising &rarr;</a>
         <a href="learn-google-ads.html">Learn Google Ads &rarr;</a>
@@ -764,19 +853,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Enquire about Learn SEO</h2>
       <p>Tell us where you are starting from and what you want to achieve. We reply to every enquiry within one business day with batch, format and fee details.</p>
       <div class="enq">
-        <form id="trainingForm" class="contact-form" novalidate>
+        <form class="contact-form training-form" novalidate>
           <input type="hidden" name="access_key" value="940d1cb3-fcc1-421c-bfb1-b33dc7268bd6">
-          <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
           <div class="form-row two">
-            <div class="field"><label for="firstName">First name</label><input id="firstName" name="first_name" type="text" autocomplete="given-name" required></div>
-            <div class="field"><label for="lastName">Last name</label><input id="lastName" name="last_name" type="text" autocomplete="family-name" required></div>
+            <div class="field"><label for="bfn">First name</label><input id="bfn" name="first_name" type="text" autocomplete="given-name" required></div>
+            <div class="field"><label for="bln">Last name</label><input id="bln" name="last_name" type="text" autocomplete="family-name" required></div>
           </div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="bem">Email</label><input id="bem" name="email" type="email" autocomplete="email" required></div>
           <div class="field">
-            <label for="phone">Phone / WhatsApp number</label>
+            <label for="bph">Phone / WhatsApp number</label>
             <div class="phone-row">
-              <select id="countryCode" name="country_code" aria-label="Country code">
-              <option value="+44" selected>UK (+44)</option>
+              <select id="bcc" name="country_code" aria-label="Country code">
+              <option value="+91" selected>India (+91)</option>
+              <option value="+44" >UK (+44)</option>
               <option value="+353">Ireland (+353)</option>
               <option value="+49">Germany (+49)</option>
               <option value="+33">France (+33)</option>
@@ -797,7 +887,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <option value="+30">Greece (+30)</option>
               <option value="+1">USA (+1)</option>
               <option value="+1">Canada (+1)</option>
-              <option value="+91">India (+91)</option>
               <option value="+92">Pakistan (+92)</option>
               <option value="+880">Bangladesh (+880)</option>
               <option value="+94">Sri Lanka (+94)</option>
@@ -818,13 +907,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <option value="+55">Brazil (+55)</option>
               <option value="+52">Mexico (+52)</option>
             </select>
-              <input id="phone" name="phone" type="tel" autocomplete="tel-national" required>
+              <input id="bph" name="phone" type="tel" autocomplete="tel-national" required>
             </div>
           </div>
           <div class="form-row two">
-            <div class="field"><label for="course">Course</label><select id="course" name="course" required><option value="Learn SEO" selected>Learn SEO</option><option value="Learn Amazon Advertising">Learn Amazon Advertising</option><option value="Learn Google Ads">Learn Google Ads</option></select></div>
-            <div class="field"><label for="level">Your level</label>
-              <select id="level" name="level" required>
+            <div class="field"><label for="bco">Course</label><select id="bco" name="course" required><option value="Learn SEO" selected>Learn SEO</option><option value="Learn Amazon Advertising">Learn Amazon Advertising</option><option value="Learn Google Ads">Learn Google Ads</option></select></div>
+            <div class="field"><label for="blv">Your level</label>
+              <select id="blv" name="level" required>
                 <option value="">Select...</option>
                 <option>Complete beginner</option>
                 <option>Some experience</option>
@@ -832,9 +921,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <option>Team or company enquiry</option>
               </select></div>
           </div>
-          <div class="field"><label for="message">Anything we should know? (optional)</label><textarea id="message" name="message" rows="4"></textarea></div>
+          <div class="field"><label for="bms">Anything we should know? (optional)</label><textarea id="bms" name="message" rows="3"></textarea></div>
           <button type="submit" class="btn btn-solid">Send enquiry</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
         <aside class="enq-side">
           <h3>Prefer to talk first?</h3>
@@ -849,6 +938,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 </main>
+
+<a class="wa-float" data-whatsapp data-wa-text="Hi HelloEcom, I would like to know more about Learn SEO." href="#" hidden target="_blank" rel="noopener" aria-label="Chat with HelloEcom on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.1-.5-.3z"/></svg></a>
 
 <div id="site-footer"></div>
 
@@ -895,48 +986,46 @@ document.addEventListener('keydown', function(e){
     a.href = 'https://wa.me/' + n + '?text=' + encodeURIComponent(a.getAttribute('data-wa-text') || '');
     a.hidden = false;
   });
-  var form = document.getElementById('trainingForm');
-  if(!form) return;
-  var status = document.getElementById('formStatus');
-  var btn = form.querySelector('button[type="submit"]');
   var ENDPOINT = 'https://api.web3forms.com/submit';
   var FALLBACK = 'Sorry, something went wrong. Please email connect@helloecom.net instead.';
-  function setStatus(msg, kind){ status.textContent = msg; status.className = 'form-status' + (kind ? ' ' + kind : ''); }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!form.checkValidity()){ form.reportValidity(); return; }
-    var key = form.elements['access_key'].value;
-    var first = form.elements['first_name'].value.trim();
-    var last = form.elements['last_name'].value.trim();
-    var course = form.elements['course'].value;
-    var payload = {
-      access_key: key,
-      subject: 'Training enquiry: ' + course,
-      from_name: 'HelloEcom website (training)',
-      name: first + ' ' + last,
-      first_name: first,
-      last_name: last,
-      email: form.elements['email'].value.trim(),
-      phone: form.elements['country_code'].value + ' ' + form.elements['phone'].value.trim(),
-      course: course,
-      level: form.elements['level'].value,
-      message: form.elements['message'].value.trim(),
-      page: location.href,
-      botcheck: form.elements['botcheck'].checked
-    };
-    btn.disabled = true;
-    setStatus('Sending...', '');
-    fetch(ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(payload)})
-    .then(function(r){ return r.json(); })
-    .then(function(res){
-      if(res && res.success){
-        var keep = form.elements['course'].value;
-        form.reset(); form.elements['course'].value = keep;
-        setStatus('Thank you, your enquiry has been sent. We reply to every enquiry within one business day.', 'success');
-      } else { setStatus(FALLBACK, 'error'); }
-    })
-    .catch(function(){ setStatus(FALLBACK, 'error'); })
-    .then(function(){ btn.disabled = false; });
+  document.querySelectorAll('form.training-form').forEach(function(form){
+    var status = form.querySelector('.form-status');
+    var btn = form.querySelector('button[type="submit"]');
+    function setStatus(msg, kind){ status.textContent = msg; status.className = 'form-status' + (kind ? ' ' + kind : ''); }
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      var first = form.elements['first_name'].value.trim();
+      var last = form.elements['last_name'].value.trim();
+      var course = form.elements['course'].value;
+      var payload = {
+        access_key: form.elements['access_key'].value,
+        subject: 'Training enquiry: ' + course,
+        from_name: 'HelloEcom website (training)',
+        name: first + ' ' + last,
+        first_name: first,
+        last_name: last,
+        email: form.elements['email'].value.trim(),
+        phone: form.elements['country_code'].value + ' ' + form.elements['phone'].value.trim(),
+        course: course,
+        level: form.elements['level'].value,
+        message: form.elements['message'].value.trim(),
+        page: location.href,
+        botcheck: form.elements['botcheck'].checked
+      };
+      btn.disabled = true;
+      setStatus('Sending...', '');
+      fetch(ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(payload)})
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if(res && res.success){
+          form.reset();
+          setStatus('Thank you, your enquiry has been sent. We reply to every enquiry within one business day.', 'success');
+        } else { setStatus(FALLBACK, 'error'); }
+      })
+      .catch(function(){ setStatus(FALLBACK, 'error'); })
+      .then(function(){ btn.disabled = false; });
+    });
   });
 })();
 </script>
