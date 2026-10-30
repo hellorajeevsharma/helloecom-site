@@ -33,3 +33,5 @@
 - [Privacy Policy](https://helloecom.net/privacy.html)
 - [Terms & Conditions](https://helloecom.net/terms.html)
 - [Cookie Policy](https://helloecom.net/cookie-policy.html)
+- [Careers](https://helloecom.net/careers.html): Work with HelloEcom across marketplaces, stores, ads and SEO.
+- [Marketplace profit calculator](https://helloecom.net/profit-calculator.html): Free tool to compare profit per unit and break-even ad spend across marketplaces.
