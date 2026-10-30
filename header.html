@@ -1,6 +1,14 @@
+<style>
+.brand-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.brand-tagline{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-weight:500;font-size:11.5px;letter-spacing:.02em;color:var(--ink-soft);padding-left:2px}
+@media(max-width:780px){.brand-tagline{display:none}}
+</style>
 <header class="masthead">
   <div class="wrap masthead-inner">
-    <a class="logo-link" href="/" aria-label="HelloEcom — home"><img class="logo-icon logo-icon-light" src="logo-color.png" alt="HelloEcom"><img class="logo-icon logo-icon-dark" src="logo-white.png" alt="HelloEcom"></a>
+    <div class="brand-wrap">
+      <a class="logo-link" href="/" aria-label="HelloEcom — home"><img class="logo-icon logo-icon-light" src="logo-color.png" alt="HelloEcom"><img class="logo-icon logo-icon-dark" src="logo-white.png" alt="HelloEcom"></a>
+      <span class="brand-tagline">One team. Every channel.</span>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav" id="siteNav">
       <a href="/">Home</a>
